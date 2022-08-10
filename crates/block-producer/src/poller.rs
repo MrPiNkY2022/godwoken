@@ -299,6 +299,8 @@ impl ChainUpdater {
                     reverted_blocks: reverted_blocks.collect(),
                 }
             }
+            // FIXME: implement RollupFinalizeWithdrawal
+            RollupActionUnion::RollupFinalizeWithdrawal(_) => todo!(),
         };
 
         let update = L1Action {
