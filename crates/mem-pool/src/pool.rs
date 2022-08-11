@@ -1142,7 +1142,7 @@ impl MemPool {
         // execute tx
         let raw_tx = tx.raw();
         let run_result = tokio::task::block_in_place(|| {
-            generator.unchecked_execute_transaction(
+            generator.execute_transaction(
                 &chain_view,
                 state,
                 block_info,
